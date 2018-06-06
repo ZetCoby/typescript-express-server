@@ -13,3 +13,7 @@ Make sure to have globally installed nodemon and typescript
 ## Starting the server
 
 ``` npm start ```
+
+Server runs at port ``` 8080 ```
+
+Access ```http://localhost:8080/api/users``` to see the sample
