@@ -1,4 +1,5 @@
 import * as express from 'express';
+import UserController from './controllers/userController';
 
 export default class Routes {
     private router: express.Router;
@@ -8,12 +9,9 @@ export default class Routes {
     }
 
     public register () {
-        this.router.get('/test', (req: express.Request, res: express.Response) => {
-            res.json({message:"server started"});
-        });
-
-        this.router.get('/test2', (req: express.Request, res: express.Response) => {
-            res.json({message:"server started2"});
+        this.router.get('/users', (req: express.Request, res: express.Response) => {
+            let userController: UserController = new UserController();
+            res.json(userController.getUsers());
         });
     }
 }
